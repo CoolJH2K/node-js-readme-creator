@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// TODO: Include generateMarkdown, fs, and inquirer@8.2.4
 const inquirer = require('inquirer');
 
 // TODO: Create an array of questions for user input
@@ -39,10 +39,14 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    // Return the writeFile method using fileName and data being passed in
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    // Inquirer goes in here; then, call back the funciton to use generateMarkdown as a data source; pass data from Inquirer into this! How is the spread operator (...) to be used in this?
+}
 
 // Function call to initialize app
 init();
