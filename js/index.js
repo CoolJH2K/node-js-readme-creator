@@ -4,28 +4,37 @@ const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
 const questions = [
     {
+        question: "What will the name of your project be?"
+    },
+    {
         question: "Would you like to make a table of contents for your README?"
     },
     {
-        question: "Why did you make this application?"
+        question: "Why did you do this project?"
     },
     {
         question: "What problem does this solve?"
     },
     {
-        question: "What did you learn from making this application?"
+        question: "What did you learn while working on this project?"
     },
     {
-        question: "Can this application be installed? If so, what are the steps needed for installation?"
+        question: "Can this application be installed? If so, what are the steps needed for installation? (If your project isn't something people need to install, just type 'N/A.')"
     },
     {
         question: "How will this application be used?"
     },
     {
-        question: "Are there any third-party assets, tutorials, or other programmers that you used that need to be given proper credit?"
+        question: "Were there any third-party assets or tutorials used, or did any other programmers help you with your project? If not, just type 'N/A.'"
     },
     {
-        question: "Finally, what open-source license does your application use, if applicable?"
+        question: "Which open-source license will your application use?"
+    },
+    {
+        question: "How did you test your application?"
+    },
+    {
+        question: "Finally, what are some frequently asked questions (FAQ) regarding your project?"
     }
 ];
 
