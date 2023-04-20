@@ -1,3 +1,4 @@
+// Link used for reference: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -28,7 +29,7 @@ function renderLicenseSection(license) {
   if () {
     
   } else {
-    
+    return "";
   }
 }
 
