@@ -4,7 +4,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./generateMarkdown.js");
 
-// Create an array of questions for user input
+// Created an array of questions for user input
 inquirer 
     .prompt([
         {
@@ -71,18 +71,24 @@ inquirer
         }
     ])
     .then((answers) => {
-        return console.log(answers);
+        // Uses all the answers the user gives to make the README
+        const readmeContent = createReadme(answers);
+        // Makes the README
+        fs.writeFile("README.md", readmeContent, (err) => {
+            err ? console.log(err) : console.log("README file created!");
+        });
     })
 
 // This function will write the README file
-function writeToFile(fileName, data) {
+function writeToFile(fileName, answers) {
     // Return the writeFile method using fileName and data being passed in
-    return(data);
+    return(answers);
 }
 
-// TODO: Create a function to initialize app
+// This function will initialize app
 function init() {
-
+    .promptUser()
+        .then((answers) => writeToFile)
 }
 
 // Function call to initialize app

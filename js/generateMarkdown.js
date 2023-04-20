@@ -2,7 +2,9 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  // This will use data passed in from the generateMarkdown funciton. Have a logic gate to make sure a license is chosen
+  // This will use data passed in from the generateMarkdown funciton. Have a logic gate to make sure a liceprintMetaData() {
+    console.log(`Created by ${this.authorName} on ${this.createdOn}`);
+  }
   if () {
 
   } else {
