@@ -8,11 +8,6 @@ const generateMarkdown = require("./generateMarkdown.js");
 inquirer 
     .prompt([
         {
-            name: "github_username",
-            message: "What is your GitHub user name?",
-            type: "input",
-        },
-        {
             name: "project_name",
             message: "What will the name of your project be?",
             type: "input",
@@ -22,6 +17,11 @@ inquirer
             message: "Would you like to make a table of contents for your README?",
             type: "list",
             choices: ["Yes", "No"],
+        },
+        {
+            name: "description",
+            message: "Give a brief description of your project.",
+            type: "input",
         },
         {
             name: "project_motivation",
@@ -36,6 +36,11 @@ inquirer
         {
             name: "lessons_learned",
             message: "What did you learn while working on this project?",
+            type: "input",
+        },
+        {
+            name: "testing",
+            question: "How did you test your application?",
             type: "input",
         },
         {
@@ -55,20 +60,10 @@ inquirer
         },
         {
             name: "license",
-            question: "Which open-source license will your application use?",
+            question: "Finally, which open-source license will your application use?",
             type: "rawlist",
             choices: ["Unlicense", "Boost Software License 1.0", "MIT License", "Apache License 2.0", "Mozilla Public License 2.0", "GNU LGPLv3", "GNU GPLv3", "GNU AGPLv3"],
         },
-        {
-            name: "testing",
-            question: "How did you test your application?",
-            type: "input",
-        },
-        {
-            name: "frequently_asked_questions",
-            question: "Finally, what are some frequently asked questions (FAQ) regarding your project?",
-            type: "input",
-        }
     ])
     .then((answers) => {
         // Uses all the answers the user gives to make the README
@@ -87,8 +82,6 @@ function writeToFile(fileName, answers) {
 
 // This function will initialize app
 function init() {
-    .promptUser()
-        .then((answers) => writeToFile)
 }
 
 // Function call to initialize app

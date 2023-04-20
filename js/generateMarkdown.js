@@ -1,4 +1,11 @@
 // Link used for reference: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+// Include fs and inquirer
+const fs = require("fs");
+const inquirer = require("inquirer");
+
+// Sets up the generateMarkdown function
+const generateMarkdown = ({project_name, table_of_contents, description, project_motivation, problem_solved, lessons_learned, installation, app_use, credits, license, testing})
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
