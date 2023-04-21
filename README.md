@@ -9,6 +9,7 @@ For those who are trying to come up with a well-structured README for their proj
 I loved learning about how node.js works. It's so much fun typing "node [insert JS file here]" in the terminal and watching code you made being logged. It's also very helpful because you don't have to rely on a browser's built-in console to test your JavaScript functions.
 ## Screenshot
 ## Installation
+First, you will need to install node.js by visiting the node.js [download page](https://nodejs.org/en/download). Then, you should download the node_modules folder from the GitHub repo so the app will have all the necessary dependencies needed to run the app. After that, all you need to do is open your computer's terminal and type in "node index.js" to run the app!
 ## Usage
 This automatic README generator was made with new programmers in mind, but more experienced programmers are welcome to use this to make a README for their projects, too!
 ## Credits
