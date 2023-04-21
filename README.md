@@ -1,4 +1,4 @@
-# node-js-readme-creator
+# README Creator
 ## Description
 So you've got all your code set up for your application. All you need to do now is write a high-quality README! Except... you're not *quite* sure how to make one by hand yet. Not to worry, though. That's where the README generator comes in! Simply run this little app using your operating system's terminal, answer some questions about the project you're making, and a README file will be generated for you!
 ### Why did I make this?

@@ -2,7 +2,7 @@
 // Include fs, inquirer@8.2.4, and generateMarkdown
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./generateMarkdown.js");
+//const generateMarkdown = require("./generateMarkdown.js");
 
 // Created an array of questions for user input
 inquirer 
@@ -80,8 +80,12 @@ function writeToFile(fileName, answers) {
     return(answers);
 }
 
-// This function will initialize app
+// This function will initialize the app
 function init() {
+    promptUser()
+    .then((answers) => writeFile("README.md", generateMarkdown(answers)))
+    .then(() => console.log("Successfully wrote to README.md"))
+    .catch((err) => console.error(err));
 }
 
 // Function call to initialize app

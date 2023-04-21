@@ -4,7 +4,26 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 
 // Sets up the generateMarkdown function
-const generateMarkdown = ({project_name, table_of_contents, description, project_motivation, problem_solved, lessons_learned, installation, app_use, credits, license, testing})
+/* const generateMarkdown = ({project_name, table_of_contents, description, project_motivation, problem_solved, lessons_learned, testing, installation, app_use, credits, license}) => 
+  # ${project_name}
+  ## Description
+  ${description}
+  ### Why did I make this?
+  ${project_motivation}
+  ### What problem does this solve?
+  ${problem_solved}
+  ### What did I learn?
+  ${lessons_learned}
+  ## Testing
+  ${testing}
+  ## Installation
+  ${installation}
+  ## Usage
+  ${app_use}
+  ## Credits
+  ${credits}
+  ## License
+  ${license}; */
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -43,10 +62,30 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown ({project_name, table_of_contents, description, project_motivation, problem_solved, lessons_learned, testing, installation, app_use, credits, license}) {
+  `# ${project_name}
+  ## Table of Contents
+  ${table_of_contents}
+  ## Description
+  ${description}
+  ### Why did I make this?
+  ${project_motivation}
+  ### What problem does this solve?
+  ${problem_solved}
+  ### What did I learn?
+  ${lessons_learned}
+  ## Testing
+  ${testing}
+  ## Installation
+  ${installation}
+  ## Usage
+  ${app_use}
+  ## Credits
+  ${credits}
+  ## License
+  ${license}`;
 
-`;
+  return `# ${data.title}`;
   // You will need to use the license funcitons in here, passing data to the funcitons you call -- licenseFunction(data.license)
 }
 
