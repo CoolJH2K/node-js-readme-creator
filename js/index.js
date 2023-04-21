@@ -2,7 +2,7 @@
 // Include fs, inquirer@8.2.4, and generateMarkdown
 const fs = require("fs");
 const inquirer = require("inquirer");
-//const generateMarkdown = require("./generateMarkdown.js");
+const generateMarkdown = require("./generateMarkdown");
 
 // Created an array of questions for user input
 inquirer 

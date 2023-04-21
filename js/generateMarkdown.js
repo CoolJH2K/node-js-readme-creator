@@ -25,26 +25,24 @@ const inquirer = require("inquirer");
   ## License
   ${license}; */
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+// This function returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   // This will use data passed in from the generateMarkdown funciton. Have a logic gate to make sure a liceprintMetaData() {
     console.log(`Created by ${this.authorName} on ${this.createdOn}`);
-  }
-  if () {
 
+  if (license !== "none") {
+    return `https://img.shields.io/badge/License-${license}-blue`;
   } else {
     return "";
   }
-  return `https://img.shields.io/badge/License-${license}-blue`
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// This function will return the license link
 function renderLicenseLink(license) {
 
-  if () {
-
+  if (license !== "none") {
+    return `https://img.shields.io/badge/License-${license}-blue`;
   } else {
     return "";
   }
@@ -54,14 +52,14 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   // This will use data passed in from the generateMarkdown function. Have a logic gate to make sure a license is chosen.
-  if () {
-    
+  if (license !== "none") {
+    return `https://img.shields.io/badge/License-${license}-blue`;
   } else {
     return "";
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// Sets up the generateMarkdown function
 function generateMarkdown ({project_name, table_of_contents, description, project_motivation, problem_solved, lessons_learned, testing, installation, app_use, credits, license}) {
   `# ${project_name}
   ## Table of Contents
@@ -87,6 +85,9 @@ function generateMarkdown ({project_name, table_of_contents, description, projec
 
   return `# ${data.title}`;
   // You will need to use the license funcitons in here, passing data to the funcitons you call -- licenseFunction(data.license)
+  renderLicenseBadge();
+  renderLicenseLink();
+  renderLicenseSection();
 }
 
 module.exports = generateMarkdown;
